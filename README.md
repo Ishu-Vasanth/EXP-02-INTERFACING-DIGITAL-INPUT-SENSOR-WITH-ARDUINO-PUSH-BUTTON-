@@ -37,18 +37,11 @@ FIGURE-01
 FIGURE-02
 PROCEDURE 
  Open tinker cad account 
-1.	Select Arduino uno , bread board , digital input and digital output 
-2.	Connect the circuit as given in the figure 
-3.	Develop the program and compile it for any errors 
-4.	 .Execute the program 
-5.	Check the simulation 
-
-
-
-
-
-
-
+1. Select Arduino uno , bread board , digital input and digital output
+2. Connect the circuit as given in the figure
+3. Develop the program and compile it for any errors
+4. Execute the program
+5. Check the simulation
 
 CIRCUIT DIAGRAM 
 
@@ -66,16 +59,42 @@ FIGURE -03
 
 
 
-PROGRAM 
- 
- 
- 
- 
- 
+PROGRAM :
+ ```
+ int ledpin=7;
+int pushpin=2;
+int val=0;
+void setup()
+{
+  pinMode(ledpin, OUTPUT);
+  pinMode(pushpin,INPUT);
+}
 
-
-
+void loop()
+{
+  val =digitalRead(pushpin);
+  if(val==0)
+  {
+    digitalWrite(ledpin,HIGH);
+  }
+  else
+  {
+    digitalWrite(ledpin,LOW);
+  }
+    
+}
+ 
+```
 Output of the simulation :
 
-[My image](username.github.com/repository/img/image.jpg)
+## Before stimulation:
 
+![output](ot.png)
+
+## After stimulation:
+
+![output](ot1.png)
+
+## Result:
+
+Thus the simulation output is completed in tinker cad successfully.
